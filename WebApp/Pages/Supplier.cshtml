@@ -1,0 +1,50 @@
+﻿@page
+@model WebApp.Pages.Supplier
+
+@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="text-center">
+    <h2>Suppliers</h2>
+        <table class="table">
+            <tr><td><h4>Id</h4></td><td><h4>Name</h4></td><td><h4>SN</h4></td><td><h4>Product Name</h4></td></tr>
+            @foreach(DBModel.Supplier s in Model.Suppliers)
+            {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>@s.Name</td>
+                    @foreach(DBModel.Product p in s.Products){ <td>@p.SerialNumber</td> <td>@p.Name</td> }
+                </tr>
+            }
+        </table>
+    
+        <form method="POST">
+            <input type="text" name="name" value="Name"/>
+            <input type="text" name="pSN" value="Product SN"/>
+            <input type="text" name="pName" value="Product Name"/>
+            <input type="text" name="pPrice" value="Product price"/>
+            <input type="text" name="pNumber" value="Product number"/>
+            <input type="submit" value="Add"/>
+        </form>
+    
+        <form method="POST">
+            <input type="text" name="id" value="Id"/>
+            <input type="text" name="name" value="Name"/>
+            <input type="submit" asp-page-handler="Update" value="Update"/>
+        </form>
+        
+        <form method="POST">
+            <input type="text" name="id" value="Id"/>
+            <input type="submit" asp-page-handler="Delete" value="Delete"/>
+        </form>
+</div>
+</body>
+</html>

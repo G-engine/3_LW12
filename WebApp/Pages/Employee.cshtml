@@ -1,0 +1,58 @@
+﻿@page "{handler?}"
+@using Microsoft.EntityFrameworkCore
+@model WebApp.Pages.Employee
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="text-center">
+    <h2>Employees</h2>
+    <table class="table">
+        <tr><td><h4>Id</h4></td><td><h4>Name</h4></td><td><h4>Job</h4></td><td><h4>Salary</h4></td><td><h4>Schedule</h4></td><td><h4>Vacation</h4></td></tr>
+        @foreach(DBModel.Employee e in Model.Employees)
+        {
+            <tr>
+                <td>@e.Id</td>
+                <td>@e.Name</td>
+                <td>@e.Job</td>
+                <td>@e.Salary</td>
+                <td>@e.Schedule</td>
+                <td>@e.InVacation</td>
+            </tr>
+        }
+    </table>
+
+    <form method="POST">
+        <input type="text" name="name" value="Name"/>
+        <input type="text" name="job" value="Job"/>
+        <input type="text" name="salary" value="Salary"/>
+        <input type="text" name="schedule" value="Schedule"/>
+        <input type="submit" value="Add"/>
+    </form>
+
+    <form method="POST">
+        <input type="text" name="id" value="Id"/>
+        <input type="text" name="name" value="Name"/>
+        <input type="text" name="job" value="Job"/>
+        <input type="text" name="salary" value="Salary"/>
+        <input type="text" name="schedule" value="Schedule"/>
+        <input type="text" name="inVacation" value="Vacation"/>
+        <input type="submit" asp-page-handler="Update" value="Update"/>
+    </form>
+    
+    <form method="POST">
+        <input type="text" name="id" value="Id"/>
+        <input type="submit" asp-page-handler="Delete" value="Delete"/>
+    </form>
+</div>
+</body>
+</html>

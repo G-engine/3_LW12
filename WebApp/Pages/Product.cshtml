@@ -1,0 +1,59 @@
+﻿@page
+@model WebApp.Pages.Product
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="text-center">
+    <h2>Products</h2>
+        <table class="table">
+            <tr><td><h4>Id</h4></td><td><h4>SerialNumber</h4></td><td><h4>Name</h4></td><td><h4>Price</h4></td>
+                <td><h4>Number</h4></td><td><h4>SupplierId</h4></td><td><h4>SupplierName</h4></td></tr>
+            @foreach(DBModel.Product p in Model.Products)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.SerialNumber</td>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                    <td>@p.Number</td>
+                    <td>@p.SupplierId</td>
+                    <td>@p.Supplier.Name</td>
+                </tr>
+            }
+        </table>
+    
+        <form method="POST">
+            <input type="text" name="name" value="Name"/>
+            <input type="text" name="sn" value="Serial Number"/>
+            <input type="text" name="price" value="Price"/>
+            <input type="text" name="number" value="Number"/>
+            <input type="text" name="sId" value="Supplier Id"/>
+            <input type="submit" value="Add"/>
+        </form>
+    
+        <form method="POST">
+            <input type="text" name="id" value="Id"/>
+            <input type="text" name="name" value="Name"/>
+            <input type="text" name="sn" value="Serial Number"/>
+            <input type="text" name="price" value="Price"/>
+            <input type="text" name="number" value="Number"/>
+            <input type="text" name="sId" value="Supplier Id"/>
+            <input type="submit" asp-page-handler="Update" value="Update"/>
+        </form>
+        
+        <form method="POST">
+            <input type="text" name="id" value="Id"/>
+            <input type="submit" asp-page-handler="Delete" value="Delete"/>
+        </form>
+</div>
+</body>
+</html>

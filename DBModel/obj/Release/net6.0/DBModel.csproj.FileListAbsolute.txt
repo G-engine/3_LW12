@@ -1,0 +1,14 @@
+D:\projects\C#\lw12\DBModel\bin\Release\net6.0\DBModel.deps.json
+D:\projects\C#\lw12\DBModel\bin\Release\net6.0\DBModel.runtimeconfig.json
+D:\projects\C#\lw12\DBModel\bin\Release\net6.0\DBModel.dll
+D:\projects\C#\lw12\DBModel\bin\Release\net6.0\DBModel.pdb
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.csproj.AssemblyReference.cache
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.AssemblyInfoInputs.cache
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.AssemblyInfo.cs
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.csproj.CoreCompileInputs.cache
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.dll
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\refint\DBModel.dll
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.pdb
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\DBModel.genruntimeconfig.cache
+D:\projects\C#\lw12\DBModel\obj\Release\net6.0\ref\DBModel.dll
